@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/bootstrap.min.css") }}">
+
+    <!-- Custom crossorigin -->
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/custom.css") }}">
+
+    <title>Register new student</title>
+  </head>
+  <body>
+
+    <div class="container" style="margin-top: 50px;">
+      <div class="row">
+        <div class="col-md">
+          <h2>New Student</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <a type="button" href="{{ url_for('index') }}" class="btn btn-dark">List of Students</a>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md">
+
+
+          <form class="form-horizontal">
+
+          	<div class="form-group"> <!-- Full Name -->
+          		<label for="full_name_id" class="control-label col-sm-2">Full Name</label>
+          		<div class="col-sm-8">
+          			<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
+          		</div>
+          	</div>
+
+          	<div class="form-group"> <!-- Email -->
+          		<label for="email_id" class="control-label col-sm-2">Email</label>
+          		<div class="col-sm-5">
+          			<input type="email" class="form-control" id="email_id" name="email_name" placeholder="name@domain.com">
+          		</div>
+          	</div>
+
+            <div class="form-group"> <!-- Course -->
+          		<label for="email_id" class="control-label col-sm-2">Email</label>
+          		<div class="col-sm-5">
+          			<input type="email" class="form-control" id="email_id" name="email_name" placeholder="Software Engineering">
+          		</div>
+          	</div>
+
+          	<div class="form-group"> <!-- Submit Button -->
+          		<div class="col-sm-10 col-sm-offset-2">
+          			<button type="submit" class="btn btn-dark">Create</button>
+          		</div>
+          	</div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="{{ url_for("static", filename="js/jquery-3.3.1.slim.min.js") }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{ url_for("static", filename="js/popper.min.js") }}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="{{ url_for("static", filename="js/bootstrap.min.js") }}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
