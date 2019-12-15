@@ -10,10 +10,7 @@ from app import login_manager
 @app.route('/')
 @login_required
 def index():
-    return """
-    You are on the index page<br />
-    <b>you is authenticated</b>
-    """
+    return render_template("index.html")
 
 
 @app.route('/login', methods=['GET', 'POST'])
