@@ -28,30 +28,46 @@
         </div>
       </div>
 
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-md">
+            <div class="alert alert-success" role="alert">
+              <ul class=flashes>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endwith %}
+
       <div class="row" style="margin-top: 50px;">
         <div class="col-md">
 
-
-          <form class="form-horizontal">
+          <form class="form-horizontal" action="" method="POST">
+            {{ form.csrf_token }}
 
           	<div class="form-group"> <!-- Full Name -->
           		<label for="full_name_id" class="control-label col-sm-2">Full Name</label>
           		<div class="col-sm-8">
-          			<input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="John Deer">
+                {{ form.name(class="form-control", placeholder="John Deer") }}
           		</div>
           	</div>
 
           	<div class="form-group"> <!-- Email -->
           		<label for="email_id" class="control-label col-sm-2">Email</label>
           		<div class="col-sm-5">
-          			<input type="email" class="form-control" id="email_id" name="email_name" placeholder="name@domain.com">
+          			{{ form.email(class="form-control", placeholder="name@domain.com") }}
           		</div>
           	</div>
 
             <div class="form-group"> <!-- Course -->
-          		<label for="email_id" class="control-label col-sm-2">Email</label>
+          		<label for="email_id" class="control-label col-sm-2">Course</label>
           		<div class="col-sm-5">
-          			<input type="email" class="form-control" id="email_id" name="email_name" placeholder="Software Engineering">
+                {{ form.course(class="form-control", placeholder="Software Engineering") }}
           		</div>
           	</div>
 
